@@ -1,0 +1,44 @@
+﻿@model BookstoreManagement.Models.Book
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1 class="text-center">Book Details</h1>
+
+<div class="border p-4 rounded bg-light shadow mx-auto" style="max-width: 600px;">
+    <h4 class="text-muted">Book Information</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-4">
+            @Html.DisplayNameFor(model => model.Title)
+        </dt>
+        <dd class="col-sm-8">
+            @Html.DisplayFor(model => model.Title)
+        </dd>
+        <dt class="col-sm-4">
+            @Html.DisplayNameFor(model => model.Author)
+        </dt>
+        <dd class="col-sm-8">
+            @Html.DisplayFor(model => model.Author)
+        </dd>
+        <dt class="col-sm-4">
+            @Html.DisplayNameFor(model => model.Price)
+        </dt>
+        <dd class="col-sm-8">
+            @Html.DisplayFor(model => model.Price)
+        </dd>
+        <dt class="col-sm-4">
+            @Html.DisplayNameFor(model => model.Genre)
+        </dt>
+        <dd class="col-sm-8">
+            @Html.DisplayFor(model => model.Genre)
+        </dd>
+    </dl>
+</div>
+
+<div class="text-center mt-3">
+    <a asp-action="Edit" asp-route-id="@Model?.Id" class="btn btn-warning">Edit</a>
+    <span class="mx-2">|</span>
+    <a asp-action="Index" class="btn btn-secondary">Back to List</a>
+</div>

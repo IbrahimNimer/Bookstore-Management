@@ -1,0 +1,32 @@
+﻿@{
+    ViewData["Title"] = "Welcome to Bookstore Management";
+}
+
+<div class="jumbotron text-center bg-light">
+    <h1 class="display-4">Welcome to Bookstore Management</h1>
+    <p class="lead">Your one-stop solution for managing your bookstore efficiently.</p>
+    <hr class="my-4">
+    <p>Explore our collection, manage your inventory, and add new books to your store.</p>
+    <a class="btn btn-primary btn-lg" href="@Url.Action("Index", "Books")" role="button">Browse Books</a>
+    <a class="btn btn-success btn-lg" href="@Url.Action("Create", "Books")" role="button">Add a New Book</a>
+</div>
+
+<div class="container my-5">
+    <div class="row text-center">
+        <div class="col-md-4 mb-4">
+            <h3>Manage Your Books</h3>
+            <p>Keep track of all the books in your inventory, update details, and manage your collection with ease.</p>
+            <a class="btn btn-outline-primary" href="@Url.Action("Index", "Books")">Go to Books</a>
+        </div>
+        <div class="col-md-4 mb-4">
+            <h3>Add New Titles</h3>
+            <p>Expand your collection by adding new books. Ensure your inventory is always up-to-date.</p>
+            <a class="btn btn-outline-success" href="@Url.Action("Create", "Books")">Add a Book</a>
+        </div>
+        <div class="col-md-4 mb-4">
+            <h3>Privacy and Security</h3>
+            <p>We prioritize your privacy and the security of your data. Learn more about our policies.</p>
+            <a class="btn btn-outline-secondary" href="@Url.Action("Privacy", "Home")">View Privacy Policy</a>
+        </div>
+    </div>
+</div>
