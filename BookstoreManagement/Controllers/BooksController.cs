@@ -18,7 +18,7 @@ namespace BookstoreManagement.Controllers
             _context = context;
         }
 
-        // GET: Books
+        // GET: Books    
         public async Task<IActionResult> Index(string searchString)
         {
             var books = from b in _context.Books
@@ -37,7 +37,9 @@ namespace BookstoreManagement.Controllers
         }
 
 
-        // GET: Books/Details/5
+        // GET: Books/Details/5  
+
+
         public async Task<IActionResult> Details(int? id)
         {
             if (id == null || _context.Books == null)
